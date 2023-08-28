@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://www.24diario.com.ar/</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/index.html</loc>
+  <lastmod>2020-06-27T18:30:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/cordoba.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/rosario.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/negocios.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/tecnologia.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/politica.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/deportes.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/autos.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/espectaculos.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/cripto.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.24diario.com.ar/mendoza.html</loc>
+  <priority>0.80</priority>
+</url>
+
+</urlset>
