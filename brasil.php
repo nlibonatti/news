@@ -77,7 +77,6 @@ array("title" => "The Brazilian Report",
         
         </script>
 
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="cache-control" content="no-store">
@@ -97,8 +96,9 @@ array("title" => "The Brazilian Report",
 <?php include ('header.php');?>
 
  </nav>
- </div>
-  <div class="container">
+  </div>
+
+   <div class="container">
       <div class="row ml-3">
        <h1>Diarios Brasileiros</h1>
       </div>
@@ -120,10 +120,9 @@ array("title" => "The Brazilian Report",
 
  <div class="row ml-3 mr-1 border-bottom">
  <a href="https://www.remessaonline.com.br/" target="_blank"><h2><p class="font-weight-bold mb-0 mt-0">USD - BRL</p></h2></a>
-</div>
+ </div>
 
-
-<?php
+ <?php
         include_once('simple_html_dom.php');
 
         // Dolar oficial
@@ -136,22 +135,10 @@ array("title" => "The Brazilian Report",
             echo '<div class="col-md-3">';
             echo '<small><p><i class="fas fa-dollar-sign fa-lg"></i> oficial | ' .$compra.'. <a href="https://www.remessaonline.com.br/cotacao/cotacao-dolar/" class="text-info" target="_blank" rel=“nofollow">[remessaonline]</a></p></small>';    
             echo '</div>';
-
+            echo '</div>';
 
 
   ?>
-
-            <div class="row ml-3 mr-1 border-bottom">
-            
-            </div>
-
-    <div class="row ml-1 mr-1 mt-1">
-   <br>
-
-   <div class="row ml-3 mr-1 border-bottom">
- 
-</div>
-
 
 <div class="row ml-3 mr-1 border-bottom">
  <h2><p class="font-weight-bold mb-0 mt-0">Mercados Brasil</p></h2>
@@ -173,52 +160,15 @@ array("title" => "The Brazilian Report",
             echo '<small><p><i class="fas fa-chart-line fa-lg"></i> b3 | ' .$b3.' <a href="https://www.b3.com.br/es/" class="text-info" target="_blank" rel=“nofollow">[b3.com]</a></p></small>';    
             echo '</div>'; 
             echo '</div>'; 
-  ?>
-
-            <div class="row ml-3 mr-1 border-bottom">
-            <h2><p class="font-weight-bold mb-0">Diarios Brasil</p></h2>
-            </div>
+        ?>
       <br>
-      <div class="row ml-1 mr-1 mb-1">
-
-                  <div class="col-md-2 col-6 d-flex justify-content-right align-self-center">
-                  <a href="https://www.folha.uol.com.br/" class='btn btn-light' target='_blank' rel='nofollow'><img src="./img/folha.png" class="img-fluid" alt="Folha" width="16" height="16"> Folha de Sao Paulo</a>
-                  </div>
-
-                  <div class="col-md-2 col-6 d-flex justify-content-right align-self-center">
-                  <a href="https://estadaomt.com.br/" class='btn btn-light' target='_blank' rel='nofollow'><img src="./img/estadaomt.gif" class="img-fluid" alt="Estadao MT" width="16" height="16"> Estadao MT</a>
-                  </div>
-
-                  <div class="col-md-2 col-6 d-flex justify-content-right align-self-center">
-                  <a href="https://en.mercopress.com/brazil/" class='btn btn-light' target='_blank' rel='nofollow'><img src="./img/cronista.gif" class="img-fluid" alt="Mercopress" width="16" height="16"> Mercopress</a>
-                  </div>
-
-                  <div class="col-md-2 col-6 d-flex justify-content-right align-self-center">
-                  <a href="https://braziliantimes.com/" class='btn btn-light' target='_blank' rel='nofollow'><img src="./img/btimes.gif" class="img-fluid" alt="Brazilian Times" width="16" height="16"> Brazilian Times</a>
-                  </div>
-
-                  <div class="col-md-2 col-6 d-flex justify-content-right align-self-center">
-                  <a href="https://brasil247.com/" class='btn btn-light' target='_blank' rel='nofollow'><img src="./img/tv247.png" class="img-fluid" alt="Brazil 24/7" width="16" height="16"> Brazil 24/7</a>
-                  </div>
-
-                  <div class="col-md-2 col-6 d-flex justify-content-right align-self-center">
-                  <a href="https://www.riotimesonline.com/" class='btn btn-light' target='_blank' rel='nofollow'><img src="./img/riotimes.gif" class="img-fluid" alt="Rio Times width="16" height="16"> Rio Times</a>
-                  </div>
-
-                  </div>
-
-
-
-      <br>
-
-
             <div class="row ml-3 mr-1 border-bottom">
             <h2><span class="font-weight-bold mb-0">Últimas Noticias Brasil - Diarios Brasileños</span></h2>
             </div>
            <br>
 
     <div class="row ml-1 mr-1">
-					    <?php 
+			<?php 
                         foreach ($url as $name):
                         echo '<div class="col-md-6">';
                         $feed->set_feed_url($name["html"]);
@@ -231,19 +181,20 @@ array("title" => "The Brazilian Report",
                         echo $title;
 					    ?>
 
-            <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush">
 
-				    <?php foreach($feed->get_items(0,6) as $item): ?>  
+	<?php foreach($feed->get_items(0,6) as $item): ?>  
+
             <?php if ($item->get_permalink()) echo '<li class="list-group-item"><a href="' . $item->get_permalink() . '" class="text-body" target="_blank" rel="nofollow">'; echo $item->get_title(); echo '.<small></a>'; ?>&nbsp;<span class="text-info"><?php echo $item->get_date('j M Y') . '<a data-toggle="collapse" href="#collapseExample" class="text-dark" role="button" aria-expanded="false" aria-controls="collapseExample" rel=“nofollow"> <i class="fas fa-angle-double-down text-success"></i></a></small>' ; ?>&nbsp;</span>
                         <div class="collapse" id="collapseExample">
                         <?php echo '<small><p class="text-muted">' . substr(strip_tags($item->get_description($str)),0,400) . '</p></small>'; ?>
                         </div>
-				    <?php endforeach; ?>
-            </li>
+			<?php endforeach; ?>
+                        </li>
                       <br>    
                     </div>
-				<?php endforeach; ?>
-        </ul>
+		  <?php endforeach; ?>
+                </ul>
 
             </div>
 
