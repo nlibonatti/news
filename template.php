@@ -58,25 +58,6 @@ array("title" => "The Brazilian Report",
 <html lang="sp">
 <head>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7733400-5"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-7733400-5');
-        </script>
-
-        <!-- Global site tag (gtag.js) - Google Ads: 1038288710 -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1038288710"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-1038288710');
-        
-        </script>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="cache-control" content="no-store">
@@ -91,6 +72,7 @@ array("title" => "The Brazilian Report",
     <link rel="stylesheet" href="./css/theme.css">
 
     <title>24 Diario - Diarios Brasileiros - Últimas noticias</title>
+
 </head>
 
 <?php include ('header.php');?>
@@ -104,68 +86,15 @@ array("title" => "The Brazilian Report",
       </div>
 <br>
 
-                <!-- Adsense -->
-
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- display -->
-                <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-6906448708478395"
-                data-ad-slot="1181358845"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-
  <div class="row ml-3 mr-1 border-bottom">
  <a href="https://www.remessaonline.com.br/" target="_blank"><h2><p class="font-weight-bold mb-0 mt-0">USD - BRL</p></h2></a>
  </div>
 
- <?php
-        include_once('simple_html_dom.php');
-
-        // Dolar oficial
-            $html = file_get_html('https://www.remessaonline.com.br/cotacao/cotacao-dolar');
-
-            $compra = $html->find('div[class="style__Text-sc-1a6mtr6-2 ljisZu"]', 0)->innertext;
-            //$venta = $html->find('div[class="sell-value"]', 0)->innertext;
-
-            echo '<div class="row ml-3 mt-2">';
-            echo '<div class="col-md-3">';
-            echo '<small><p><i class="fas fa-dollar-sign fa-lg"></i> oficial | ' .$compra.'. <a href="https://www.remessaonline.com.br/cotacao/cotacao-dolar/" class="text-info" target="_blank" rel=“nofollow">[remessaonline]</a></p></small>';    
-            echo '</div>';
-            echo '</div>';
-
-
-  ?>
-
-<div class="row ml-3 mr-1 border-bottom">
- <h2><p class="font-weight-bold mb-0 mt-0">Mercados Brasil</p></h2>
-</div>
-
-<?php
-      // B3 - Bovespa
-
-        //$json_string = 'https://mercados.ambito.com//indice/.merv/variacion-ultimo';
-        //$jsondata = file_get_html($json_string);
-        //$obj = json_decode($jsondata, true);
-        //$merval = ($obj["variacion"]);
-
-        $html = file_get_html('https://www.b3.com.br/es/');
-        $b3 = $html->find('div[class="valor baixa"]', 1)->innertext;
-
-            echo '<div class="row ml-3 mt-2">';
-            echo '<div class="col-md-3">';
-            echo '<small><p><i class="fas fa-chart-line fa-lg"></i> b3 | ' .$b3.' <a href="https://www.b3.com.br/es/" class="text-info" target="_blank" rel=“nofollow">[b3.com]</a></p></small>';    
-            echo '</div>'; 
-            echo '</div>'; 
-        ?>
       <br>
             <div class="row ml-3 mr-1 border-bottom">
             <h2><span class="font-weight-bold mb-0">Últimas Noticias Brasil - Diarios Brasileños</span></h2>
             </div>
-           <br>
+      <br>
 
     <div class="row ml-1 mr-1">
 			<?php 
